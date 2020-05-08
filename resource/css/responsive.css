@@ -1,0 +1,140 @@
+@media only screen and (max-width:1200px){
+    .row{
+        margin: 0 35px;
+    }
+}
+@media only screen and (max-width:1040px){
+.grid-team-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    margin-top: 60px; 
+     }
+.grid-team-item{
+    width: 200px;
+    height:200px;
+    
+} 
+
+.grid-team-item img{
+    width: 200px;
+    height:200px;
+    }
+} 
+
+@media only screen and (max-width:980px){
+    .mobile-menu{
+        display: block;
+    }
+.main-nav{
+        display: none;
+    }
+
+  
+}
+
+
+
+
+@media only screen and (max-width:768px){
+      .description{
+            width: 100%;
+     }
+    .hero-intro{
+       font-size: 130%;
+    }
+    #portfolio h2{
+       margin-top: 20%;
+
+}
+    .grid-portfolio-item:nth-child(5){
+       margin-bottom: 20%; 
+    }
+    .grid-portfolio-item:nth-child(6){
+       margin-bottom: 20%; 
+    }
+     .grid-portfolio-container{
+     grid-template-columns: 1fr 1fr ;
+     grid-gap: 10px;
+     margin-top: 40px;  
+        
+    }
+.grid-team-container{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 60px; 
+     }
+    .grid-team-item{
+        margin: auto;
+    }
+    
+ .slick-prev {
+    left: 0px;
+}
+ .slick-next {
+    right: 0px;
+}
+ .slid p{
+    width:90%; 
+    font-size: 120%;
+    
+}
+ .grid-contact-container{
+   
+    grid-template-columns: 1fr 1fr;    
+
+}
+  .grid-contact-item{
+    margin-top:20px; 
+}   
+}
+.world-map{
+      margin-top: 20px;
+}
+.world{
+    text-align: center;
+    margin-left:5%;
+    
+    width:80%;
+}
+
+.usa{
+  position: absolute;
+    top: 25%;
+    left: 27%;
+}    
+.france{
+  position: absolute;
+    top: 15%;
+    left: 45%;  
+}    
+.egypt{
+   position: absolute;
+    top: 45%;
+    left: 60%;  
+}   
+
+@media only screen and (max-width:480px){
+    
+    
+    .grid-services-container{
+        grid-template-columns: 1fr;
+    
+    }   
+ .grid-portfolio-container{
+    grid-template-columns: 1fr;
+    margin-top:30px;  
+    
+}
+   .grid-team-container{
+        grid-template-columns: 1fr;
+        
+    
+    } 
+    .grid-team-item{
+        margin: auto;
+    }
+    
+       
+    }
+     
+}

@@ -1,0 +1,565 @@
+/*================================================================
+Template Name: Arrow
+    Temaplte URI:
+    Description: An awesome portfolio html5 template.
+    Author: Konock
+    Author URI:
+    Support: konock1995@gmail.com
+    Version: 1.0
+==================================================================*/
+
+
+/* ==========================================
+
+    CSS INDEX
+    =========
+    1. COMMON CSS
+    2. HERO
+    3. SERVICES
+    4. PORTFOLIO
+    5. TEAM
+    6. OFFICES
+    7.CLIENTS
+    8.CONTRACT
+
+=========================================== */
+
+/* ==========================================
+
+    1. COMMON CSS
+
+=========================================== */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 10px;
+
+
+}
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+h1,h2,h3,h4{
+   font-family: 'Raleway', sans-serif;
+   font-weight: 700;
+}
+
+
+/* REUSUABLE COMPONENETS */
+
+.row{
+    max-width: 1140px;
+    margin: auto;
+}
+section{
+    padding: 120px 0;
+}
+
+h2 {
+    color: #2980b9;
+    font-size: 250%;
+    font-weight: 700;
+    text-align: center;
+
+}
+h2::after{
+    content:'';
+    display: block;
+    border: 2px solid #2980b9;
+    width: 50px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+h3{
+    font-size: 200%;
+    font-weight: 700;
+    color: #2980b9;
+    margin-top: 10px;
+}
+
+
+h4{
+   font-size: 200%;
+   font-weight: 700;
+   margin: 15px;
+}
+.description{
+    width: 35%;
+    margin: auto;
+    line-height: 1.5;
+    margin-top:15px;
+    text-align: center;
+    font-size: 130%;
+}
+.text-box{
+    font-size: 130%;
+    color: #616161;
+    line-height: 1.5;
+}
+/* ==========================================
+
+    2. HERO
+
+=========================================== */
+#hero {
+    background: url('img/hero-01.jpg');
+    height: 120vh;
+   /*clip-path: polygon(50% 0%, 100% 0, 100% 88%, 50% 100%, 0 89%, 0 0);*/
+}
+nav{
+    overflow: hidden;
+
+
+}
+.logo img{
+  margin-top: 25px;
+  width: 65px;
+}
+.main-nav{
+    float: right;
+    margin-top: 35px;
+}
+.main-nav  li{
+    display: inline-block;
+    margin-right: 25px;
+
+}
+.main-nav  li:last-child{
+   margin-right: 0px;
+}
+ li a{
+    font-size: 180%;
+    color: #fff;
+
+}
+
+.main-nav  li:hover a{
+    border-bottom: 2px solid #fff;
+}
+.main-nav a.active {
+  border-bottom: 2px solid #fff;  
+}
+
+
+
+/* STICKY MENU */
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(41, 128, 185, 0.9);
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.sticky .logo,
+.sticky .nav-icon {
+    margin-top: 20px;
+}
+/*MOBILE MENU*/
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu span{
+    font-size: 4rem;
+    color: #fff;
+    float: right;
+    margin-top: -50px;
+
+}
+.mobile-menu span:hover{
+    cursor: pointer;
+}
+.mobile-menu span a{
+   
+
+}
+.closeNav{
+    color: #fff;
+    font-size: 6rem;
+    text-decoration: none; 
+    overflow: hidden;
+}
+.overlay{
+    width:0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    overflow-x: hidden;
+    transition:0.5s;
+}
+.overlay-content{
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.overlay-content a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 1rem 0;
+    letter-spacing: .3rem;
+    color: #999;
+}
+.overlay-content a:hover{
+    color: #fff;
+}
+
+
+
+
+
+.hero-logo,
+.hero-text-box{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+}
+.hero-logo{
+
+   overflow: hidden;
+}
+
+.hero-text-box{
+   margin-top: 150px;
+
+
+}
+.hero-intro{
+    margin-top: 30px;
+    font-size: 180%;
+    line-height: 1.5;
+
+
+}
+.btn{
+    margin-top: 45px;
+}
+.btn a{
+    text-align: center;
+    display: block;
+    font-size: 150%;
+    font-weight: 700;
+    border: 2px solid #fff;
+    color: #fff;
+    width:120px;
+    margin: auto;
+    padding: 10px;
+    transition: .5s;
+}
+.btn a:hover{
+    background: #fff;
+    color: #000;
+}
+/* ==========================================
+
+    3. SERVICES
+
+=========================================== */
+#service{
+    color: #000;
+    text-align: center;
+}
+.grid-services-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin-top: 60px;
+    text-align: center;
+}
+.grid-services-item img{
+    width: 40px;
+    height: 45px;
+
+}
+
+
+/* ==========================================
+
+    4. PORTFOLIO
+
+=========================================== */
+#portfolio{
+  background:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(img/hero-02.JPG) no-repeat center/ cover;
+ clip-path: polygon(50% 11%, 100% 0, 100% 88%, 51% 100%, 0 91%, 0 0);
+}
+#portfolio h2{
+    color: #fff;
+
+}
+#portfolio h2::after{
+    border: 2px solid #fff;
+}
+.grid-portfolio-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 60px;
+
+}
+.grid-portfolio-item img{
+    width:100%;
+
+
+}
+.grid-portfolio-item {
+     width: 100%;
+   position: relative;
+
+}
+.plus {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background: rgba(57, 136, 187, 0.9);
+     transition: .5s;
+}
+.plus p{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.plus a{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.plus p{
+   font-size: 160%;
+    font-weight: 700;
+
+
+}
+.plus a{
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+}
+.grid-portfolio-item:hover .plus{
+    display: none;
+}
+
+/* ==========================================
+
+    5. TEAM
+
+=========================================== */
+#team .description{
+    color: #000;
+}
+
+.grid-team-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:5px;
+    margin-top: 60px;
+    text-align: center;
+}
+.grid-team-item{
+    width: 300px;
+    height:300px;
+
+}
+
+.grid-team-item img{
+    width: 300px;
+    height:300px;
+}
+.gallery{
+  position: relative;
+}
+.gallery-icon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(57, 136, 187, 0.9);
+    transition: .5s;
+    opacity: 0;
+
+}
+
+.grid-team-item:hover .gallery-icon{
+    opacity: 1;
+}
+.gallery-icon:hover{
+   transform: rotate(360deg);
+}
+.gallery-icon ul li{
+    display: inline-block;
+}
+ .gallery-icon a i{
+     color: #2980b9;
+     border: 1px solid #fff;
+     padding: 10px;
+     border-radius: 50%;
+     background: #fff;
+     margin: 0 5px;
+     font-size: 100%;
+
+}
+.gallery-icon a i:hover {
+   transform: rotate(360deg);
+
+}
+.grid-team-item span{
+    font-size: 150%;
+    color: #000;
+    text-align: center;
+    overflow: hidden;
+}
+ /* ==========================================
+
+    6. OUR OFFICES
+
+=========================================== */
+
+#offices{
+    background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url(img/hero-03.jpg) no-repeat center/ cover ;
+    clip-path: polygon(50% 11%, 100% 0, 100% 88%, 51% 100%, 0 91%, 0 0);
+
+}
+#offices h2{
+    color: #fff;
+}
+#offices h2::after{
+    border:2px solid #fff;
+}
+
+.world-map{
+   position: relative;
+}
+.world{
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 30px;
+
+
+}
+.usa{
+  position: absolute;
+    top: 20%;
+    left: 40%;
+}
+.france{
+  position: absolute;
+    top: 10%;
+    left: 45%;
+}
+.egypt{
+   position: absolute;
+    top: 40%;
+    left: 60%;
+}
+ /* ==========================================
+
+    7. OUR CLIENTS
+
+=========================================== */
+#clients{
+    color: #000;
+}
+#clients .description{
+    color: #000;
+}
+.slid p{
+    width: 70%;
+    margin: auto;
+    font-size: 180%;
+    margin-top: 25px;
+    line-height: 1.5;
+    margin-bottom: 10px
+}
+.slid span {
+    font-size: 150%;
+    margin-left: 15%;
+}
+.slick-prev::before, .slick-next::before {
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1;
+    color: #000;
+}
+.slick-prev {
+    left: 65px;
+}
+.slick-next {
+    right: 65px;
+}
+/* ==========================================
+
+    8. CONTRACT
+
+=========================================== */
+#contact {
+   background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url(img/hero-04.jpg) no-repeat center/ cover ;
+     clip-path: polygon(50% 11%, 100% 0, 100% 88%, 51% 100%, 0 91%, 0 0);
+}
+#contact h2{
+    color: #fff;
+}
+#contact h2::after{
+    border:2px solid #fff;
+}
+.grid-contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 60px;
+}
+.grid-contact-item{
+    text-align: center;
+}
+.grid-contact-item img{
+    width: 30px;
+    height: 30px;
+}
+.grid-contact-item a i{
+    font-size: 300%;
+    color: #fff;
+}
+.grid-contact-item span{
+    font-size: 150%;
+}
+#contact .copy{
+    margin-top: 120px;
+    font-size: 150%;
+    text-align: center;
+}
